@@ -34,3 +34,18 @@ for filename in os.listdir(UNLABELLED_FACES_DIR):
         if True in results:
             match = labelled_names[results.index(True)]
             print(f"Match found: {match}")
+
+            top_left = (face_location[3], face_location[0])
+            bottom_right = (face_location[1], face_location[2])
+            color = [0,0,255]
+            cv2.rectangle(image, top_left, bottom_right, color, 3)
+
+            top_left = (face_location[3], face_location[2])
+            bottom_right = (face_location[1], face_location[2]+22)
+            cv2.rectangle(image, top_left, bottom_right, color, cv2.FILLED)
+            cv2.putText(image, match, (face_location[3]+10, face_location[2]+15), cv2.FONT_HERSHEY_COMPLEX, 0.5, (200,200,200), 2)
+    
+    cv2.imshow(filename, image)
+    cv2.waitKey(1000)
+    # cv2.destroyWindow(filename)
+

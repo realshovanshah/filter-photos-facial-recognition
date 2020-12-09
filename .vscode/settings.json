@@ -1,5 +1,5 @@
 {
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "python.pythonPath": "faceAi\\Scripts\\python.exe"
+    "python.pythonPath": "c:\\Users\\Shah Jr\\OneDrive\\Current\\filter-photos-facial-recognition\\faceai\\Scripts\\python.exe"
 }
